@@ -6,9 +6,10 @@
 	"license": "MIT",
 	"scripts": {
 		"test": "mocha --require test/setup.js",
-		"start": "node src/practice.js",
+		"start": "node src/blogful.js",
 		"predeploy": "npm audit",
-		"deploy": "git push heroku master"
+		"deploy": "git push heroku master",
+		"seed:blogful": "psql -U dunder_mifflin -d knex-practice -f ./blogful-scripts/seed.blogful.sql"
 	},
 	"dependencies": {
 		"cors": "^2.8.5",
